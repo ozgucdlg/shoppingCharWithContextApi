@@ -1,8 +1,12 @@
-import React from 'react';
-import { ReactDOM } from 'react';
+import { StrictMode } from "react";
+import ReactDOM from "react-dom";
 
-const index = () => {
-  return <div></div>;
-};
+import App from "./App";
 
-export default index;
+const rootElement = document.getElementById("root");
+ReactDOM.render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+  rootElement
+);
