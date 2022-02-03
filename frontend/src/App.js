@@ -1,33 +1,24 @@
-import React ,{useState }from 'react';
-//import "./style.css";
-import UserList from "./UserList";
+import React from "react";
+import "./styles.css";
+import { Route } from "react-router-dom";
+import Products from "./components/Products";
+import Cart from "./components/Cart";
 
+import { data } from "./data";
 
-const data =[
-  {id:1, name:"John", email:"john@gmail.com", age:25, color:"Lightcyan"}, 
-  {id:2, name:"William", email:"william@gmail.com", age:34, color:"hondeydew"}, 
-  {id:3, name:"Michael", email:"michael@gmail.com", age:45, color:"hmistyrose"}, 
-]
-   
-
-const App = () => {
-  const [users,setUsers] = useState(data); 
-
-  const changeColor = (id,color) => {
-    setUsers(
-      users.map(user => (user.id === id ? {...user,color:color} : user ))
-    );
-  }
-  return   (
-  <div>
-  <header>
-    <h1> Welcome to our system</h1>
-  </header>
-  <UserList users={users}   changeColor={changeColor} />
-
-  </div>
-  
+export default function App() {
+  return (
+    <div className="App">
+      <h1>
+        Alışveriş Sepeti Yapımı
+        <img
+          src="https://avatars3.githubusercontent.com/u/60869810?v=4"
+          alt="React Dersleri"
+        />{" "}
+        React Dersleri
+      </h1>
+      <Route exact path="/" component={Products} />
+      <Route path="/components/cart" component={Cart} />
+    </div>
   );
-};
-
-export default App;
+}
