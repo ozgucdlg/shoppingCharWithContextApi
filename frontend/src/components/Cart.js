@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Cart = () => {
+const Cart = (props) => {
   return   <>
-      <div>
+
+  
+       <div>
       <h2>
         <Link to="/">Kitap Listesi</Link> <span>Sepetim</span>
       </h2>
@@ -26,7 +28,7 @@ const Cart = () => {
           <button>+</button>
         </div>
       </div>
-    </div>
+    </div> 
   </>
 };
 

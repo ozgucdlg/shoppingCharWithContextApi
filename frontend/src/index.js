@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter , Route, Routes } from "react-router-dom";
 import App from "./App";
 
 import Products from "./components/Products";
@@ -8,14 +8,15 @@ import Cart from "./components/Cart";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
-  <React.StrictMode>
-    <Router>
+  
+    <BrowserRouter>
       <Routes>
-     <Route exact path="/" component={Products} />
-      <Route path="/components/cart" component={Cart} />
-      <App />
+      <Route exact path="/" element={<App />} />
+      <Route path="/components/Cart" element={<Cart />} />
+      <Route path="/components/Products" element={<Products />} />
+      
       </Routes>
-    </Router>
-  </React.StrictMode>,
+    </BrowserRouter>
+  ,
   rootElement
 );

@@ -1,8 +1,7 @@
 import React from "react";
 import "./styles.css";
-import { Route } from "react-router-dom";
-import Products from "./components/Products";
-import Cart from "./components/Cart";
+import { Link } from "react-router-dom";
+
 
 import { data } from "./data";
 
@@ -17,8 +16,8 @@ export default function App() {
         />{" "}
         React Dersleri
       </h1>
-      <Route exact path="/" component={Products} />
-      <Route path="/components/cart" component={Cart} />
+      <Link to="./components/Products" > Products</Link> 
+      <Link to="./components/Cart"> My Cart </Link>
     </div>
   );
 }
