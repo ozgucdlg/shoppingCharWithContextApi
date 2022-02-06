@@ -16,7 +16,13 @@ const Products = (props) => {
         <span>Kitap Listesi</span>
         <Link to="../components/Cart">Sepetim</Link>
       </h2>
-      <div className="book">
+
+      {context.map(book =><div className="book">
+        <img src={book.image} alt={book.name} />
+
+
+      </div> )}
+     {/*  <div className="book">
         <img
           src="https://images-na.ssl-images-amazon.com/images/I/51eqjXwFzwL._SX344_BO1,204,203,200_.jpg"
           alt="Simyaci"
@@ -73,7 +79,7 @@ const Products = (props) => {
           <p>Fiyat: &#8378; 19.99</p>
           <button>Sepete Ekle</button>
         </div>
-      </div>
+      </div> */}
     </div>
     
     </>
