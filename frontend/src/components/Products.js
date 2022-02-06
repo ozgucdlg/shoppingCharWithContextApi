@@ -1,7 +1,15 @@
-import React from "react";
+import {React,useContext} from "react";
 import { Link } from "react-router-dom";
 
-const Products = () => {
+import {BooksContext} from '../App';
+
+const Products = (props) => {
+
+
+    const context = useContext(BooksContext);
+    console.log(context);
+
+
   return <>
     <div>
       <h2>
