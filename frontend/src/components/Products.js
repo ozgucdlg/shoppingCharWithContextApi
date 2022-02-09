@@ -18,9 +18,9 @@ const context = useContext(BooksContext);
 
 
 
-{/* 
+ 
 
-      {context.map(book => (
+      {context.state.bookList.map(book => (
 
       <div  clasName="book">
           <img src={book.image } alt={book.name}  /> 
@@ -28,7 +28,7 @@ const context = useContext(BooksContext);
          <h4>{book.name}</h4>
          <p>{book.author}</p>
          <p>fiyat : {book.price}</p>
-         <button>sepete ekle</button>
+         <button onClick={() => context.addToCart(book)}>sepete ekle</button>
        </div>
 
        </div>  
@@ -42,7 +42,7 @@ const context = useContext(BooksContext);
 
 
 
- */}
+ 
 
       
 
