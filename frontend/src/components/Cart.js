@@ -23,11 +23,11 @@ const Cart = () => {
           <h4>{book.name}</h4>
           <p>{book.author}</p>
           <p>Fiyat: &#8378; {book.price}</p>
-          <p>Toplam: &#8378;{book.price * book.count}</p>
+          <p>Toplam: &#8378;{(book.price * book.count).toFixed(2)}</p>
           <p>Sepetinizde bu kitaptan toplam {book.count} adet var.</p>
-          <button>-</button>
-          <button>Sepetten Çıkar</button>
-          <button>+</button>
+          <button onClick={() =>context.decrease(book.id)}>-</button>
+          <button onClick={()=> context.removeFromCart(book.id)}>Sepetten Çıkar</button>
+          <button onClick={()=> context.increase(book.id)}>+</button>
         </div>
       </div>)}
 
