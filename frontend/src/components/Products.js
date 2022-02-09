@@ -22,7 +22,7 @@ const context = useContext(BooksContext);
 
       {context.state.bookList.map(book => (
 
-      <div  clasName="book">
+      <div  clasName="book"  key={book.id}>
           <img src={book.image } alt={book.name}  /> 
        <div>
          <h4>{book.name}</h4>
